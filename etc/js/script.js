@@ -21,9 +21,9 @@ const hyper = () => {
         textAera.value = "# Wait... are you trying to make me crash?\n\n# No, you wouldn't do that, would you?";
         _stop()
         return
-    } else if (script.length > 10000) {
+    } else if (script.length > 25000) {
         textAera = document.getElementById('out')
-        textAera.value = "# Sorry, but the maximum weight for files is 10KB\n\n# If you want to obfuscate bigger files, please download Hyperion ;)";
+        textAera.value = "# Sorry, but the maximum weight for files is 25KB\n\n# If you want to obfuscate bigger files, please download Hyperion ;)";
         _stop()
         return
     }
