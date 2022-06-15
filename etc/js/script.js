@@ -1,14 +1,14 @@
 // settings
-var logo = '../etc/images/icon.ico';
+var logo = '../etc/images/icon.ico'
 
 const start = () => {
-    let button = document.getElementById('obfuscate');
+    let button = document.getElementById('obfuscate')
     button.style.backgroundColor = '#969696';
     button.innerHTML = '...';
 }
 
 const _stop = () => {
-    let button = document.getElementById('obfuscate');
+    let button = document.getElementById('obfuscate')
     button.style.backgroundColor = '#0000ff';
     button.innerHTML = 'Obfuscate';
 }
@@ -18,13 +18,13 @@ const hyper = () => {
 
     if (script.length == 0) {
         textAera = document.getElementById('out')
-        textAera.value = '# Wait... are you trying to make me crash?\n\n# No, you wouldn\'t do that, would you?';
-        _stop();
+        textAera.value = "# Wait... are you trying to make me crash?\n\n# No, you wouldn't do that, would you?";
+        _stop()
         return
     } else if (script.length > 10000) {
-        textAera = document.getElementById('out');
-        textAera.value = '# Sorry, but the maximum weight for files is 10KB\n\n# If you want to obfuscate bigger files, please download Hyperion ;)';
-        _stop();
+        textAera = document.getElementById('out')
+        textAera.value = "# Sorry, but the maximum weight for files is 10KB\n\n# If you want to obfuscate bigger files, please download Hyperion ;)";
+        _stop()
         return
     }
 
@@ -35,15 +35,15 @@ const hyper = () => {
     ultrasafemode = document.getElementById('ultrasafemode').checked;
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://api.plague.fun/?clean=' + clean + '&addbuiltins=' + addbuiltins + '&shell=' + shell +'&safemode=' + safemode + '&ultrasafemode=' + ultrasafemode);
+    xhr.open("POST", "https://api.plague.fun/?clean=" + clean + "&addbuiltins=" + addbuiltins + "&shell=" + shell +"&safemode=" + safemode + "&ultrasafemode=" + ultrasafemode);
     
     xhr.onload = () => {
-        textAera = document.getElementById('out');
+        textAera = document.getElementById('out')
         textAera.value = xhr.responseText;
-        _stop();
+        _stop()
     }
 
-    let data = script;
+    let data = script
 
     xhr.send(data);
 }
