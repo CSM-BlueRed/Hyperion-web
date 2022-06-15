@@ -56,16 +56,6 @@ const obf = () => {
 const setup = () => {
     let navIcon = (document.getElementsByTagName('img'))[0];
     navIcon.src = logo;
-
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://api.plague.fun/count');
-
-    xhr.onload = () => {
-        let userCountTag = document.getElementById('user-count');
-        userCountTag.innerHTML = xhr.responseText;
-    }
-
-    xhr.send();
 }
 
 window.onload = () => {
