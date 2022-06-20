@@ -30,12 +30,13 @@ const hyper = () => {
 
     clean = document.getElementById('clean').checked;
     addbuiltins = document.getElementById('addbuiltins').checked;
+    randlines = document.getElementById('randlines').checked;
     shell = document.getElementById('shell').checked;
     safemode = document.getElementById('safemode').checked;
     ultrasafemode = document.getElementById('ultrasafemode').checked;
 
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.plague.fun/?clean=" + clean + "&addbuiltins=" + addbuiltins + "&shell=" + shell +"&safemode=" + safemode + "&ultrasafemode=" + ultrasafemode);
+    xhr.open("POST", "https://api.plague.fun/?clean=" + clean + "&addbuiltins=" + addbuiltins + "&randlines=" + randlines + "&shell=" + shell +"&safemode=" + safemode + "&ultrasafemode=" + ultrasafemode);
     
     xhr.onload = () => {
         textAera = document.getElementById('out')
