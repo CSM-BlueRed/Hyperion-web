@@ -28,10 +28,12 @@ const hyper = () => {
         return
     }
 
+    obfcontent = document.getElementById('obfcontent').checked;
     clean = document.getElementById('clean').checked;
     addbuiltins = document.getElementById('addbuiltins').checked;
     randlines = document.getElementById('randlines').checked;
     shell = document.getElementById('shell').checked;
+    camouflate = document.getElementById('camouflate').checked;
     safemode = document.getElementById('safemode').checked;
     ultrasafemode = document.getElementById('ultrasafemode').checked;
 
